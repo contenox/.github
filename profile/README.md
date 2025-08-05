@@ -1,12 +1,9 @@
-## Hi there 👋
+Hi there 👋
 
-<!--
+Welcome to contenox! A platform for agent-based applications, conversational interfaces, and knowledge-grounded automation. 
 
-**Here are some ideas to get you started:**
+contenox is focused on creating a robust and scalable ecosystem of services that simplify the development and deployment of applications powered by large language models (LLMs) using the contenox DSL.
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+contenox projects are designed with a modular, microservices-based architecture in mind to provide developers with the core runtime, LLM provider abstraction, and foundational infrastructure needed to build next-generation AI applications.
+
+A complete overview of the ecosystem and projects is located [here](https://github.com/contenox/contenox). 
