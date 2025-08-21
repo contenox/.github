@@ -6,4 +6,4 @@ contenox is focused on creating a robust and scalable ecosystem of services that
 
 The contenox projects are designed with a modular, microservices-based architecture to provide developers with the core runtime, LLM provider abstraction, and foundational infrastructure needed to build next-generation AI applications.
 
-A complete overview of the ecosystem and projects is located [here](https://github.com/contenox/contenox). All services and features are wired together in the [runtime-mvp](https://github.com/contenox/runtime-mvp) for demonstration purposes.
+A complete overview of the ecosystem and projects is located [here](https://github.com/contenox/contenox).
