@@ -13,5 +13,6 @@ Turns "vibe coding" and messy workflows from fragile toy concepts into real, rel
 
 No cloud required. No daemon. Just a single binary.
 
-→ https://contenox.com
-→ https://github.com/contenox/contenox
+https://contenox.com
+
+https://github.com/contenox/contenox
