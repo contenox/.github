@@ -1,12 +1,30 @@
-## Guardrails for AI agents
+## An agent server
 
-Every tool call is evaluated against an envelope — a JSON policy in your repo —
-before it runs: `allow`, `approve`, or `deny`. A call no rule matches takes
-`default_action`, and a malformed envelope refuses to load rather than silently
-disarming. Triggers are declared the same way: schedules, signed webhooks,
-browser forms.
+This is an agent, configured:
 
-Runs on your machine against local SQLite. Any provider — Ollama, vLLM, OpenAI,
+```json
+{
+  "default_action": "approve",
+  "rules": [
+    { "tools": "local_fs", "tool": "*", "action": "deny",
+      "when": [{ "key": "path", "op": "glob",
+                 "value": "**/{.ssh,.aws,.kube}/**" }] },
+
+    { "tools": "local_shell", "tool": "local_shell", "action": "allow",
+      "when": [{ "key": "command", "op": "command_prefix_allowlist",
+                 "value": "go test,go build,git status" }] }
+  ]
+}
+```
+
+Secrets are unreachable. Those three commands run without asking. Everything
+else stops and asks, because nothing said otherwise.
+
+That file is in your repo. Editing it changes what the agent may do — no
+rebuild, no redeploy. Triggers are declared the same way: schedules, signed
+webhooks, browser forms.
+
+Runs on your machine. Any provider — Ollama, vLLM, OpenAI,
 Anthropic, Bedrock, Vertex, Gemini, Mistral, OpenRouter. Speaks ACP, so Zed,
 JetBrains and the terminal UI drive the same agent. Apache-2.0, one binary, no
 account, and nothing phones home unless you turn it on.
