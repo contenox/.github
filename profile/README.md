@@ -47,20 +47,6 @@ nothing said otherwise — plus hard ceilings on tool calls and tokens.
 That file is in your repo. Editing it changes what the agent may do — no
 rebuild, no redeploy. `contenox vet` checks it before anything runs under it.
 
-### It survives you closing the laptop
-
-```bash
-contenox mission fire reviewer "review the payment-retry PR for regressions" --wait
-# ⏸ two regressions found, patch drafted — apply it to the branch?
-#   no answer: run checkpointed, ask saved, process released
-
-# days pass. then, from any terminal that reaches your models:
-contenox approvals respond 8f3c --answer "yes, apply it"
-# checkpoint resumed — exactly once. mission landed.
-```
-
-No babysitting a terminal, no timed-out approvals, no silent changes.
-
 ---
 
 Runs on your machine. Any provider — Ollama, vLLM, OpenAI, Anthropic, Bedrock,
